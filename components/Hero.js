@@ -1,6 +1,8 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 
 function Hero() {
+  const router=useRouter()
   return (
     <div className='flex lg:flex-row flex-col-reverse items-center lg:justify-between lg:px-52 lg:mt-20 my-10'>
 
@@ -10,8 +12,8 @@ function Hero() {
             <p className='text-gray-400 font-sora  text-lg lg:tracking-wide'>Empowers traders, liquidity providers & developers to participate in an open financial marketplace with no barriers to entry.</p>
 
             <div className='my-6 flex lg:flex-row flex-col gap-10'>
-                <button className="px-10 py-2 text-purple-100 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500">Explore</button>
-                <button className="px-10 py-2 text-purple-100 rounded-xl  border-[2px] border-gradient-to-r from-violet-500 to-fuchsia-500">How it works?</button>
+                <button onClick={e=>router.push('/marketplace')} className="px-10 py-2 text-purple-100 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500">Explore</button>
+                <button onClick={e=>router.push('/search')} className="px-10 py-2 text-purple-100 rounded-xl  border-[2px] border-gradient-to-r from-violet-500 to-fuchsia-500">How it works?</button>
                 
             </div>
         </div>
