@@ -19,7 +19,7 @@ function Hero() {
         </div>
 
         <div className='lg:w-1/2 w-full text-center px-6 lg:px-0'>
-            <img src='https://nft-29rm65xpk-namyakhan.vercel.app/images/hero.svg' className='lg:w-[400px] w-[350px] lg:ml-32'/>
+            <img src='https://nft-29rm65xpk-namyakhan.vercel.app/images/hero.svg' className='lg:w-[400px] w-[350px] lg:ml-32 ml-0'/>
         </div>
     </div>
   )
