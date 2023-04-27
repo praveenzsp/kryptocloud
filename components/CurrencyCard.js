@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 function CurrencyCard({ name, symbol, image, current_price, market_cap, price_change_percentage_24h}) {
   return (

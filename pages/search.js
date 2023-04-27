@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import { currencyData } from "@/data";
 import { useState } from "react";
 
-function search() {
+function Search() {
   const [search, setSearch] = useState("");
   const [searchCurrencyData, setSearchCurrencyData] = useState(search===''? currencyData : []);
 
@@ -59,7 +59,7 @@ function search() {
   );
 }
 
-export default search;
+export default Search;
 
 // export async function getStaticProps(){
 //     const response=await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en')

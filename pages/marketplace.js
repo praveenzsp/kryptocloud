@@ -11,7 +11,7 @@ function marketplace(){
         {
             Nfts.map(nft=>{
                 return (
-                    <div className="m-5 flex justify-center">
+                    <div className="m-5 flex justify-center" key={nft.id}>
                         <NFTCard url={nft.url} title={nft.title} profile={nft.profile} artist={nft.artist} price={nft.price} />
                     </div>
                 )
