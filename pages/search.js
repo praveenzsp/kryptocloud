@@ -1,9 +1,9 @@
 import CurrencyCard from "@/components/CurrencyCard";
 import Navbar from "@/components/Navbar";
-// import { currencyData } from "@/data";
+import { currencyData } from "@/data";
 import { useState } from "react";
 
-function Search({currencyData}) {
+function Search() {
   const [search, setSearch] = useState("");
   const [searchCurrencyData, setSearchCurrencyData] = useState(search===''? currencyData : []);
 
@@ -61,13 +61,13 @@ function Search({currencyData}) {
 
 export default Search;
 
-export async function getStaticProps(){
-    const response=await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en')
-    const data=await response.json()
-    return {
-        props:{
-            currencyData:data
-        },
-        revalidate:15000
-    }
-}
+// export async function getStaticProps(){
+//     const response=await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en')
+//     const data=await response.json()
+//     return {
+//         props:{
+//             currencyData:data
+//         },
+//         revalidate:15000
+//     }
+// }
